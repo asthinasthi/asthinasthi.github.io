@@ -1,1 +1,3 @@
 User-agent: *
+Disallow:
+Sitemap: https://mathad.me/sitemap.xml

@@ -1,216 +1,142 @@
-<head>
-  <title>
-    {{ if (eq .Site.Params.reversepagetitle true) }}
-      {{ with .Title }}
-        {{ . }} |
-      {{ end }}
-      {{- .Site.Params.author -}}
-    {{ else }}
-      {{- .Site.Params.author -}}{{ with .Title }}
-        |
-        {{ . }}
-      {{ end }}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+<meta name="robots" content="index, follow">
+{{- else }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
 
-    {{ end }}
+{{- /* Title */}}
+{{- $pageTitle := site.Title }}
+{{- if (and .Title (not .IsHome)) }}
+  {{- $pageTitle = printf "%s | %s" .Title $pageTitle }}
+{{- end }}
+<title>{{ $pageTitle }}</title>
 
-  </title>
+{{- /* Meta */}}
+{{- if .IsHome }}
+{{ with site.Params.keywords -}}<meta name="keywords" content="{{- range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}">{{ end }}
+{{- else }}
+<meta name="keywords" content="{{ if .Params.keywords -}}
+    {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
+    {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}">
+{{- end }}
+<meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection}}
+    {{- .Summary | default (printf "%s - %s" .Title  site.Title) }}{{- else }}
+    {{- with site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
+<meta name="author" content="{{ (partial "author.html" . ) }}">
+<link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">
+{{- if site.Params.analytics.googlesiteVerificationTag }}
+<meta name="google-site-verification" content="{{ site.Params.analytics.googlesiteVerificationTag }}">
+{{- end }}
+{{- if site.Params.analytics.yandexsiteVerificationTag }}
+<meta name="yandex-verification" content="{{ site.Params.analytics.yandexsiteVerificationTag }}">
+{{- end }}
+{{- if site.Params.analytics.bingsiteVerificationTag }}
+<meta name="msvalidate.01" content="{{ site.Params.analytics.bingsiteVerificationTag }}">
+{{- end }}
 
-  <!-- Meta -->
-  <meta charset="utf-8" />
-  {{- hugo.Generator -}}
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="author" content="{{ .Site.Params.author }}" />
-  <meta
-    name="description"
-    content="{{ if .Params.description }}
-      {{- .Params.description -}}
-    {{ else }}
-      {{- .Site.Params.description -}}
-    {{ end }}"
-  />
-  {{ if .Params.redirectUrl }}
-    <meta http-equiv="refresh" content="1; url={{ .Params.redirectUrl }}" />
-  {{ end }}
-  {{- if .Site.Params.googleSiteVerify }}
-    <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerify }}" />
+{{- /* Styles */}}
+{{- $theme_vars := (resources.Get "css/core/theme-vars.css") }}
+{{- $reset := (resources.Get "css/core/reset.css") }}
+{{- $media := (resources.Get "css/core/zmedia.css") }}
+{{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
+{{- $commonHighlight := (resources.Get "css/common/highlight.scss") | resources.ToCSS }}
+
+{{- /* order is important */}}
+{{- $core := (slice $theme_vars $reset $common $commonHighlight $media) | resources.Concat "assets/css/core.css" }}
+{{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
+{{- $extendedScss := (resources.Match "css/extended/*.scss") | resources.Concat "assets/css/extended.scss" | resources.ToCSS }}
+
+{{- /* bundle all required css */}}
+{{- /* Add extended css after theme style */ -}}
+{{- $stylesheet := (slice $core $extended $extendedScss) | resources.Concat "assets/css/stylesheet.css" | minify }}
+
+{{- if not site.Params.assets.disableFingerprinting }}
+{{- $stylesheet := $stylesheet | fingerprint }}
+<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet" as="style">
+{{- else }}
+<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
+{{- end }}
+
+{{- /* Favicons */}}
+<link rel="icon" href="{{ site.Params.favicon | default "favicon.ico" | absURL }}">
+<link rel="apple-touch-icon" href="{{ site.Params.appleTouchIcon | default "apple-touch-icon.png" | absURL }}">
+
+{{- /* RSS */}}
+{{ range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}">
+{{ end -}}
+{{- range .AllTranslations -}}
+<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+{{ end -}}
+
+{{- /* Misc */}}
+{{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+  {{- if site.GoogleAnalytics }}
+    {{- template "_internal/google_analytics.html" . }}
   {{- end -}}
-
-
-  <!-- CSS -->
-  {{ if eq .Site.Language.LanguageDirection "rtl" }}
-    {{ $sassTemplate := resources.Get "scss/anatole.rtl.scss" }}
-    {{ $style := $sassTemplate | resources.ExecuteAsTemplate "scss/main.rtl.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link
-      rel="stylesheet"
-      href="{{ $style.RelPermalink }}"
-      integrity="{{ $style.Data.Integrity }}"
-      crossorigin="anonymous"
-      type="text/css"
-    />
-  {{ else }}
-    {{ $sassTemplate := resources.Get "scss/anatole.scss" }}
-    {{ $style := $sassTemplate | resources.ExecuteAsTemplate "scss/main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link
-      rel="stylesheet"
-      href="{{ $style.RelPermalink }}"
-      integrity="{{ $style.Data.Integrity }}"
-      crossorigin="anonymous"
-      type="text/css"
-    />
-  {{ end }}
-
-  {{ $markupHighlightStyle := resources.Get "css/markupHighlight.css" | resources.Minify | resources.Fingerprint }}
-  <link
-    rel="stylesheet"
-    href="{{ $markupHighlightStyle.RelPermalink }}"
-    integrity="{{ $markupHighlightStyle.Data.Integrity }}"
-    crossorigin="anonymous"
-    type="text/css"
-  />
-  {{ range .Site.Params.customCss }}
-    {{ $minstyles := resources.Get . }}
-    {{ $styles := $minstyles | resources.Minify | resources.Fingerprint }}
-    <link
-      rel="stylesheet"
-      href="{{ $styles.RelPermalink }}"
-      integrity="{{ $styles.Data.Integrity }}"
-      crossorigin="anonymous"
-      media="screen"
-    />
-  {{ end }}
-  {{ $style := resources.Get "fontawesome/css/fontawesome.min.css" | resources.Fingerprint }}
-  <link
-    rel="stylesheet"
-    href="{{ $style.RelPermalink }}"
-    integrity="{{ $style.Data.Integrity }}"
-    crossorigin="anonymous"
-    type="text/css"
-  />
-  {{ $style := resources.Get "fontawesome/css/solid.min.css" | resources.Fingerprint }}
-  <link
-    rel="stylesheet"
-    href="{{ $style.RelPermalink }}"
-    integrity="{{ $style.Data.Integrity }}"
-    crossorigin="anonymous"
-    type="text/css"
-  />
-  {{ $style := resources.Get "fontawesome/css/regular.min.css" | resources.Fingerprint }}
-  <link
-    rel="stylesheet"
-    href="{{ $style.RelPermalink }}"
-    integrity="{{ $style.Data.Integrity }}"
-    crossorigin="anonymous"
-    type="text/css"
-  />
-  {{ $style := resources.Get "fontawesome/css/brands.min.css" | resources.Fingerprint }}
-  <link
-    rel="stylesheet"
-    href="{{ $style.RelPermalink }}"
-    integrity="{{ $style.Data.Integrity }}"
-    crossorigin="anonymous"
-    type="text/css"
-  />
-  {{ if .Params.redirectUrl }}
-    {{ $style := resources.Get "css/spinner.css" | resources.Minify | resources.Fingerprint }}
-    <link
-      rel="stylesheet"
-      href="{{ $style.RelPermalink }}"
-      integrity="{{ $style.Data.Integrity }}"
-      crossorigin="anonymous"
-      type="text/css"
-    />
+  {{- if site.Params.useCustomAnalytics }}
+    {{- partialCached "custom_analytics.html" . "custom_analytics.html" }}
   {{- end -}}
-  {{ if .Site.Params.googleFonts }}
-    {{ $baseUrl := "https://fonts.googleapis.com/css2?family=" }}
-    {{ $fontParam := delimit .Site.Params.googleFonts "&family=" }}
-    {{ $url := printf "%s" "&display=swap" | printf "%s%s" $fontParam | printf "%s%s" $baseUrl | printf "%s" }}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="{{ $url }}" rel="stylesheet" />
-  {{- end -}}
+{{- end -}}
 
+{{- /* https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started */}}
+{{- if .Params.cover.image }}
+  <meta name="twitter:card" content="summary_large_image" />
+{{- else }}
+  {{- with site.Params.images -}}
+    <meta name="twitter:card" content="summary" />
+  {{- end }}
+{{- end }}
+<meta name="twitter:title" content="{{ $pageTitle }}" />
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}" />
+{{- with site.Params.socialAccounts.twitter }}
+  <meta name="twitter:site" content="@{{ .username }}" />
+  <meta name="twitter:creator" content="@{{ .username }}" />
+{{- end }}
 
-  <!-- Favicons -->
-  <link rel="shortcut icon" href="{{ .Site.Params.favicon | relURL }}favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Params.favicon | relURL }}apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Params.favicon | relURL }}favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Params.favicon | relURL }}favicon-16x16.png" />
+{{- template "partials/templates/opengraph.html" (dict "page" . "pageTitle" $pageTitle) }}
 
-  <link rel="canonical" href="{{ .Permalink }}" />
+{{- template "partials/templates/schema_json.html" (dict "page" . "pageTitle" $pageTitle) }}
 
-  <!-- RSS -->
-  {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
-  {{ end -}}
+{{- partial "extend_head.html" . }}
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
+    </style>
+    {{- if (and (ne site.Params.defaultTheme "light") (ne site.Params.defaultTheme "dark")) }}
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary-bg: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-  <!-- JavaScript -->
-  {{ $anatoleHeader := resources.Get "js/anatole-header.js" }}
-  {{ $secureHeaderJS := $anatoleHeader |  resources.Minify | resources.Fingerprint }}
-  <script
-    type="text/javascript"
-    src="{{ $secureHeaderJS.RelPermalink }}"
-    integrity="{{ $secureHeaderJS.Data.Integrity }}"
-    crossorigin="anonymous"
-  ></script>
+            .list-page {
+                background: var(--theme);
+            }
 
-  {{ if not .Site.Params.disableThemeSwitcher }}
-    {{ $anatoleThemeSwitcher := resources.Get "js/anatole-theme-switcher.js" }}
-    {{ $secureThemeSwitcherJS := $anatoleThemeSwitcher |  resources.Minify | resources.Fingerprint }}
-    <script
-      type="text/javascript"
-      src="{{ $secureThemeSwitcherJS.RelPermalink }}"
-      integrity="{{ $secureThemeSwitcherJS.Data.Integrity }}"
-      crossorigin="anonymous"
-    ></script>
-  {{ end }}
+            .list-page:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-  {{- $js := "" -}}
-  {{- range .Site.Params.customJs -}}
-    {{- if or (in . "http://") (in . "https://") -}}
-      <script src="{{ . | relURL }}"></script>
-    {{- else -}}
-      {{- $customJS := resources.Get . -}}
-      {{- if $customJS -}}
-        {{- if eq $js "" -}}
-          {{- $js = $customJS -}}
-        {{- else -}}
-          {{- $js = slice $js $customJS | resources.Concat "js/custom.js" -}}
-        {{- end -}}
+            .list-page:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-      {{- end -}}
-
-    {{- end -}}
-
-  {{- end -}}
-
-  {{- if ne $js "" -}}
-    {{- $secureJS := $js |  resources.Minify | resources.Fingerprint -}}
-    <script
-      type="text/javascript"
-      src="{{ $secureJS.RelPermalink }}"
-      integrity="{{ $secureJS.Data.Integrity }}"
-      crossorigin="anonymous"
-    ></script>
-  {{- end -}}
-
-  {{ if and hugo.IsProduction .Site.Params.plausibleAnalytics .Site.Params.plausibleAnalytics.domain }}
-    {{- partial "analytics/plausible" . -}}
-  {{ end }}
-
-  {{ if and hugo.IsProduction .Site.Params.umami.serverURL .Site.Params.umami.id }}
-    {{- partial "analytics/umami" . -}}
-  {{ end }}
-
-
-  <!-- Twitter Cards -->
-  {{ template "_internal/twitter_cards.html" . }}
-
-
-  <!-- Open Graph -->
-  {{ template "_internal/opengraph.html" . }}
-
-
-  <!-- Schema.org-->
-  {{ partial "schema.html" . }}
-</head>
+    </style>
+    {{- end }}
+</noscript>

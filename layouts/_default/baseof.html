@@ -1,42 +1,25 @@
 <!DOCTYPE html>
-<html
-  dir="{{ .Site.Language.LanguageDirection | default "ltr" }}"
-  lang="{{- site.Language.Lang -}}"
-  data-theme="{{- .Site.Params.displayMode -}}"
-  {{ if eq .Site.Params.displayMode "dark" }}
-    class="html theme--dark"
-  {{ else }}
-    class="html theme--light"
-  {{ end }}
->
-  {{- partial "head.html" . -}}
-  <body class="body">
-    <div class="wrapper">
-      <aside
-        {{ if (and (or (eq .Site.Params.hidesidebar true) (eq .Params.hidesidebar true)) (not .IsHome)) }}
-          class="wrapper__sidebar wrapper__sidebar--hidden"
-        {{ else }}
-          class="wrapper__sidebar"
-        {{ end }}
-      >
-        {{- partial "sidebar.html" . -}}
-      </aside>
-      <main
-        {{ if (and (or (eq .Site.Params.hidesidebar true) (eq .Params.hidesidebar true)) (not .IsHome)) }}
-          class="wrapper__main wrapper__main--fullscreen"
-        {{ else }}
-          class="wrapper__main"
-        {{ end }}
-      >
-        <header class="header">{{ partial "navbar.html" . }}</header>
-        {{- block "main" . }}{{- end }}
-      </main>
-    </div>
+<html lang="{{ .Params.language | default .Language.Lang }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
 
-    {{- partial "footer.html" (dict "context" . "footerClassModifier" "base") -}}
+<head>
+    {{- partial "head.html" . }}
+    {{- block "head" . }}{{ end }}
+</head>
 
-    {{- if (eq .Site.Params.simpleAnalytics.enable true) -}}
-      {{- partial "analytics/simpleanalytics.html" . -}}
-    {{- end -}}
-  </body>
+<body class="
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
+{{- print "list-page" -}}
+{{- end -}}
+{{- if eq site.Params.defaultTheme `dark` -}}
+{{- print " dark" }}
+{{- end }} type-{{ .Type }} kind-{{ .Kind }} layout-{{ .Layout -}}
+" id="top">
+    {{- partialCached "header.html" . .Page -}}
+    <main class="main {{- if (eq .Kind `page`) -}}{{- print " post" -}}{{- end -}}">
+        {{- block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . -}}
+    {{- block "body_end" . }}{{ end }}
+</body>
+
 </html>

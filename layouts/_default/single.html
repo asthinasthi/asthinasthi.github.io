@@ -1,113 +1,76 @@
-{{ define "main" }}
-  <div
-    class="post {{ with .Site.Params.doNotLoadAnimations }}
-      .
-    {{ else }}
-      animated fadeInDown
-    {{ end }}"
-  >
-    {{ if .Params.thumbnail }}
-      <div class="post__thumbnail-wrapper">
-        <img class="post__thumbnail" src="{{ .Params.thumbnail | relURL }}" alt="Thumbnail image" />
-      </div>
-    {{ end }}
-    <div class="post__content">
-      <h1>{{ title .Title }}</h1>
-      {{ if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) }}
-        <ul class="post__meta">
-          <li class="post__meta-item">
-            <em class="fas fa-calendar-day post__meta-icon"></em>
-            <span class="post__meta-text"
-              >{{ if isset .Site.Params "singledateformat" }}
-                {{ if .Site.Params.localizedDates }}
-                  {{ time.Format .Site.Params.singleDateFormat .Date }}
-                {{ else }}
-                  {{ .Date.Format .Site.Params.singleDateFormat }}
-                {{ end }}
+{{- define "main" }}
+{{- $isNewsletter := eq .Type "newsletter" }}
 
-              {{ else }}
-                {{ if .Site.Params.localizedDates }}
-                  {{ time.Format "Mon, Jan 2, 2006" .Date }}
-                {{ else }}
-                  {{ .Date.Format "Mon, Jan 2, 2006" }}
-                {{ end }}
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
 
-              {{ end }}
-            </span>
-          </li>
-          <li class="post__meta-item">
-            <em class="fas fa-stopwatch post__meta-icon"></em>
-            <span class="post__meta-text">{{ i18n "reading_time" .ReadingTime }}</span>
-          </li>
-        </ul>
-      {{ end }}
-
-      {{- partial "expirationnote.html" . -}}
-
-      {{- if (eq .Params.toc true) -}}
-        {{- partial "toc.html" . -}}
+    {{- if $isNewsletter -}}
+      {{- partial "newsletter_brand.html" . }}
+    {{- end -}}
+    <h1 class="post-title">
+      {{- if $isNewsletter -}}
+        {{- replace .Title (.Param "titlePrefix") (.Param "titlePrefixReplace") -}}
+      {{- else -}}
+        {{- .Title -}}
       {{- end -}}
-
-      {{ .Content }}
-
-      {{- if isset .Params "series" -}}
-        {{- partial "series.html" . -}}
-      {{- end -}}
-
-      {{- if (eq .Site.Params.relatedPosts true) -}}
-        {{- partial "related.html" . -}}
-      {{- end -}}
-
-      {{- if (eq .Params.contact true) -}}
-        {{- partial "contact.html" . -}}
-      {{- end -}}
-
-      {{- if (eq .Site.Params.mermaid.enable true) -}}
-        {{- partial "mermaid.html" . -}}
-      {{- end -}}
+      {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end -}}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{- .Description -}}
     </div>
-    <div class="post__footer">
-      {{ with .Page.Params.Categories }}
-        {{ partial "taxonomy/categories.html" . }}
-      {{ end }}
-
-      {{ with .Page.Params.Tags }}
-        {{ partial "taxonomy/tags.html" . }}
-      {{ end }}
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{/* TODO move to footer */}}
+      {{/* partial "edit_post.html" . */}}
+      {{/* partial "post_canonical.html" . */}}
     </div>
+    {{- end }}
+  </header>
+  {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
 
-    {{ if and (or (eq .Type "post") (eq .Type .Site.Params.postSectionName)) (ne .Page.Params.disableComments true) }}
-      {{- if .Site.DisqusShortname -}}
-        <div id="comment">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ template "_internal/disqus.html" . }}
-        </div>
-      {{- end -}}
-      {{- if .Site.Params.utterances.repo -}}
-        <div id="comment">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ partial "comments/utterances.html" . }}
-        </div>
-      {{- end -}}
-      {{- if .Site.Params.giscus.repo -}}
-        <div id="comment">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ partial "comments/giscus.html" . }}
-        </div>
-      {{- end -}}
-      {{- if .Site.Params.CommentoURL -}}
-        <div id="comment">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ partial "comments/commento.html" . }}
-        </div>
-      {{- end -}}
-      {{- if .Site.Params.gitalk.repo -}}
-        <div id="comment">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ partial "comments/gitalk.html" . }}
-        </div>
-      {{- end -}}
-
-    {{ end }}
+  {{- if .Content }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
   </div>
-{{ end }}
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- if (.Param "socialLinks") }}
+    {{- partial "social_links.html" . }}
+    {{- end }}
+
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+
+    {{- if $isNewsletter }}
+      <div class="newsletter-sub">
+        <div class="notice">
+          {{- if site.Params.newsletter.notice.usePartial }}
+            {{- partial "newsletter_notice.html"}}
+          {{- else }}
+            {{- site.Params.newsletter.notice.content | default "Thanks for reading, if you like it, please subscribe below." }}
+          {{- end }}
+        </div>
+        {{- partial "newsletter_sub_form.html"}}
+      </div>
+    {{- end }}
+  </footer>
+
+  {{- if not (.Param "noComments") }}
+    <div class="comments-separator"></div>
+    {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+{{- end }}{{/* end main */}}
