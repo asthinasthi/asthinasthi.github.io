@@ -1,8 +1,8 @@
 ---
-title: My Newsletter
-subtitle: What do you want to write?
+title: Me in your mailbox 😀
+subtitle: Subscribe to my thoughts!
 description: |
-  This is the template for creating a newsletter in PaperModX.
+  Lend me your email and I will write you a few words, and I will try to  *sing* out a key!
 type: newsletter
 cascade:
   - _target:

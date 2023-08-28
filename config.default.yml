@@ -11,12 +11,12 @@ buildExpired: false
 enableEmoji: true
 
 params:
-  env: development # to enable google analytics, opengraph, twitter-cards and schema.
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "Theme PaperModX - https://github.com/reorx/hugo-PaperModX"
   author:
-    - Reorx
+    - Anirudh Mathad
   mainSections:
-    - posts
+    - projects
   disableAnchoredHeadings: true
   images: ["cover.png"]
   DateFormat: "2006-01-02"
@@ -181,7 +181,3 @@ services:
     disableInlineCSS: true
   twitter:
     disableInlineCSS: true
-
-# module:
-#   imports:
-#    - path: github.com/reorx/hugo-PaperModX
