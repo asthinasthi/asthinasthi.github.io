@@ -6,9 +6,6 @@ tags:
 author: "Anirudh Mathad"
 date: "2023-08-27"
 description: ""
-tags:
-  - productivity
-  - diy
 ShowToc: true
 TocOpen: true
 ---
