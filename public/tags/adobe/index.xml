@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>adobe on Puppet</title>
+    <link>https://mathad.me/tags/adobe/</link>
+    <description>Recent content in adobe on Puppet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 27 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mathad.me/tags/adobe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adobe Service Runtime</title>
+      <link>https://mathad.me/projects/adobe-service-runtime/</link>
+      <pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mathad.me/projects/adobe-service-runtime/</guid>
+      <description>Adobe Service RuntimeAdobe Service Runtime or ASR is an implementation of the Microservice chassis pattern. It provides mechanisms to handle cross cutting concerns like logging, health checks, metrics, easy access to foundational Adobe services via Connectors, etc.
+Why is ASR required? Provide a collection of components, tools, and best practices (12 factor) which enable rapid development of four 9s capable innovative and secure services at Adobe by product and research teams Enable a container first deployment system My Role in this ProjectI am the Hands On Lead Engineer/Architect/Product Manager for this suite of Libraries</description>
+    </item>
+    
+  </channel>
+</rss>
