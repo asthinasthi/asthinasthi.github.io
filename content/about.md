@@ -4,11 +4,11 @@ layout: about-me
 url: "/about"
 summary: About Me
 ---
-I am a “Computer Scientist” at Adobe focusing on Developer Productivity Projects. I lead the Adobe Service Runtime team used by >60% of Adobe’s Java Services. I work on various tools such as Code Generation, Onboarding Tools and Service Registry which help Adobe’s Developers go from Concept to Cloud in a few minutes.
+I am a “Computer Scientist” at Adobe focusing on Internal Developer Platform. I lead the Adobe Service Runtime team. Adobe Service Runtime is a framework used by >60% of Adobe’s Java Services. I also build several tools such as Code Generation, Onboarding Tools and Service Registry which help Adobe’s Developers go from Concept to Cloud in a few minutes.
 
 I am a Jack of many trades. I mainly work on Java, GoLang & Python. I actively work on internal ArgoCD based Deployment platform which powers successful Adobe products like Firefly, Photoshop, Doc Cloud etc.
 
-I am a huge Productivity Nerd. I am curious and chase the cool new productivity tools. So far Todoist and Logseq are my current obsessions. I am an early adopter of Upnote and Acreom.
+I am a huge Productivity Nerd. I am curious and chase the cool new productivity tools. So far [Todoist](https://todoist.com) and [Logseq](https://logseq.com) are my current obsessions. I am an early adopter of Upnote and Acreom.
 
 ## Talks and Conferences
 I presented at ArgoCon 2022.
