@@ -93,12 +93,12 @@ linkedin = "anirudhham"
 rss = true
 
 # See https://giscus.app/
-[params.giscus]
-enable = true
-repo = "roninro/hugo-theme-puppet"
-repo_id = "R_kgDOHuvyhw"
-category = "General"
-category_id = "DIC_kwDOHuvyh84CQjDo"
-input_position = "top"
-theme = "light_tritanopia"
-lang = "en"
+# [params.giscus]
+# enable = true
+# repo = "roninro/hugo-theme-puppet"
+# repo_id = "R_kgDOHuvyhw"
+# category = "General"
+# category_id = "DIC_kwDOHuvyh84CQjDo"
+# input_position = "top"
+# theme = "light_tritanopia"
+# lang = "en"
