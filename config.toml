@@ -63,7 +63,7 @@ weight = 50
 [[menu.main]]
 identifier = "github"
 name = "Github"
-url = "https://github.com/roninro/hugo-theme-puppet/"
+url = "https://github.com/asthinasthi"
 weight = 100
 
 
