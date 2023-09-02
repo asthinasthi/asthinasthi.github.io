@@ -88,26 +88,9 @@ bio = "a personal website"
 
 [params.social]
 twitter = "genrativeai"
-facebook = "johndoe"
-zhihu = "johndoe"
-weibo = "johndoe"
 github = "asthinasthi"
 linkedin = "anirudhham"
 rss = true
-[params.social.mastodon]
-weight = 56
-icon = "fab fa-mastodon"
-format = "https://mastodon.social/%v"
-id = "johndoe"
-url = ""
-
-[[params.friends]]
-name = "John Doe"
-url = "https://gohugo.io"
-
-[[params.friends]]
-name = "John Doe"
-url = "https://gohugo.io"
 
 # See https://giscus.app/
 [params.giscus]
