@@ -1,3 +1,4 @@
-# hugo-PaperModX Example
+# My Personal Website
 
-This repository offers an example site for [hugo-PaperModX](https://github.com/reorx/hugo-PaperModX)
+- Hosted at https://mathad.me
+- Built using Hugo
