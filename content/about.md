@@ -3,6 +3,10 @@ title: About Me
 layout: about-me
 url: "/about"
 summary: About Me
+author: "Anirudh Mathad"
+date: "2023-08-27"
+ShowToc: true
+TocOpen: true
 ---
 I am a “Computer Scientist” at Adobe focusing on Internal Developer Platform. I lead the Adobe Service Runtime team. Adobe Service Runtime is a framework used by >60% of Adobe’s Java Services. I also build several tools such as Code Generation, Onboarding Tools and Service Registry which help Adobe’s Developers go from Concept to Cloud in a few minutes.
 
