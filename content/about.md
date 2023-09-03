@@ -15,7 +15,7 @@ I am a Jack of many trades. I mainly work on Java, GoLang & Python. I actively w
 I am a huge Productivity Nerd. I am curious and chase the cool new productivity tools. So far [Todoist](https://todoist.com) and [Logseq](https://logseq.com) are my current obsessions. I am an early adopter of Upnote and Acreom.
 
 ## Talks and Conferences
-I presented at ArgoCon 2022.
+Recently, I presented at ArgoCon 2022.
 
 <iframe width="840" height="473" src="https://www.youtube.com/embed/JD3dRElwXMM" title="From PR to Artifactory in 60 Secs! Adobe Service Runtime Java Libraries Release Pi... Anirudh Mathad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
