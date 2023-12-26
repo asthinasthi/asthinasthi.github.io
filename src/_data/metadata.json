@@ -1,0 +1,12 @@
+{
+  "title": "Anirudh Mathad",
+  "url": "https://mathad.me",
+  "language": "en",
+  "description": "Build your own website + blog with the 'not so minimal blog starter' which uses the Eleventy static site generator.",
+  "author": {
+    "name": "Anirudh Mathad",
+    "email": "hello@blog.com"
+  },
+  "image": "/assets/social-image.jpg",
+  "feedUrl": "https://mathad.me/feed.xml"
+}

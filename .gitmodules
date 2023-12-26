@@ -1,9 +1,0 @@
-[submodule "themes/anatole"]
-	path = themes/anatole
-	url = https://github.com/lxndrblz/anatole
-[submodule "themes/PaperModX"]
-	path = themes/PaperModX
-	url = https://github.com/reorx/hugo-PaperModX.git
-[submodule "themes/puppet"]
-	path = themes/puppet
-	url = https://github.com/roninro/hugo-theme-puppet.git
