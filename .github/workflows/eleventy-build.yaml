@@ -1,0 +1,23 @@
+name: Eleventy Build
+
+on:
+  push:
+    branches:
+      - 11ty
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - run: npm install
+      - run: npx @11ty/eleventy
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: 11ty
+          folder: _site
