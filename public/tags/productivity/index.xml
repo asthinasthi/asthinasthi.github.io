@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>productivity on Puppet</title>
-    <link>https://mathad.me/tags/productivity/</link>
-    <description>Recent content in productivity on Puppet</description>
+    <title>productivity on Jane - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/productivity/</link>
+    <description>Recent content in productivity on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mathad.me/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>To DIY or Not to DIY!</title>
-      <link>https://mathad.me/posts/to-diy-or-not-to-diy/</link>
+      <link>http://localhost:1313/posts/to-diy-or-not-to-diy/</link>
       <pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mathad.me/posts/to-diy-or-not-to-diy/</guid>
+      <guid>http://localhost:1313/posts/to-diy-or-not-to-diy/</guid>
       <description>tldr; Choose a DIY project if you have nothing better to do or you just love it. If not stay away!
 We have many &amp;ldquo;hobbies&amp;rdquo; or things which we wish to get done. Our professional lives are boring! (Speak for yourself?) We seek joy in non-work things in our lives. Gardening 🪴, Building your own furniture 🪑, Building your own website 💻, Cooking 👨‍🍳, Cleaning 🧹, HBO 📺. . .</description>
     </item>

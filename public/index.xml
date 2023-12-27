@@ -1,66 +1,161 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Puppet</title>
-    <link>https://mathad.me/</link>
-    <description>Recent content on Puppet</description>
+    <title>Jane - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mathad.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Aug 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
-      <title>Adobe Service Runtime</title>
-      <link>https://mathad.me/projects/adobe-service-runtime/</link>
+      <title>About Me</title>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mathad.me/projects/adobe-service-runtime/</guid>
-      <description>Adobe Service RuntimeAdobe Service Runtime or ASR is an implementation of the Microservice chassis pattern. It provides mechanisms to handle cross cutting concerns like logging, health checks, metrics, easy access to foundational Adobe services via Connectors, etc.
-Why is ASR required? Provide a collection of components, tools, and best practices (12 factor) which enable rapid development of four 9s capable innovative and secure services at Adobe by product and research teams Enable a container first deployment system My Role in this ProjectI am the Hands On Lead Engineer/Architect/Product Manager for this suite of Libraries</description>
+      <guid>http://localhost:1313/about/</guid>
+      
+        <description>&lt;p&gt;I am a “Computer Scientist” at Adobe focusing on Internal Developer Platform. I lead the Adobe Service Runtime team. Adobe Service Runtime is a framework used by &amp;gt;60% of Adobe’s Java Services. I also build several tools such as Code Generation, Onboarding Tools and Service Registry which help Adobe’s Developers go from Concept to Cloud in a few minutes.&lt;/p&gt;
+&lt;p&gt;I am a Jack of many trades. I mainly work on Java, GoLang &amp;amp; Python. I actively work on internal ArgoCD based Deployment platform which powers successful Adobe products like Firefly, Photoshop, Doc Cloud etc.&lt;/p&gt;
+&lt;p&gt;I am a huge Productivity Nerd. I am curious and chase the cool new productivity tools. So far &lt;a href=&#34;https://todoist.com&#34;&gt;Todoist&lt;/a&gt; and &lt;a href=&#34;https://logseq.com&#34;&gt;Logseq&lt;/a&gt; are my current obsessions. I am an early adopter of Upnote and Acreom.&lt;/p&gt;
+&lt;h2 id=&#34;talks-and-conferences&#34;&gt;Talks and Conferences&lt;/h2&gt;
+&lt;p&gt;Recently, I presented at ArgoCon 2022.&lt;/p&gt;
+&lt;iframe width=&#34;840&#34; height=&#34;473&#34; src=&#34;https://www.youtube.com/embed/JD3dRElwXMM&#34; title=&#34;From PR to Artifactory in 60 Secs! Adobe Service Runtime Java Libraries Release Pi... Anirudh Mathad&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;professional-life&#34;&gt;Professional Life&lt;/h2&gt;
+&lt;p&gt;In Reverse Chronological Order
+(&lt;a href=&#34;https://www.adobe.com/&#34;&gt;Adobe&lt;/a&gt; | &lt;a href=&#34;https://www.rakuten.com/&#34;&gt;Rakuten/Slice&lt;/a&gt; | &lt;a href=&#34;https://www.veracyte.com/&#34;&gt;Veracyte&lt;/a&gt; | &lt;a href=&#34;https://healthbi.com&#34;&gt;HealthBI&lt;/a&gt; | Delphi)&lt;/p&gt;
+&lt;p&gt;I am a Computer Scientist at &lt;a href=&#34;https://www.adobe.com/&#34;&gt;Adobe&lt;/a&gt;. I mainly focus on Platform Engineering Projects. I lead the Adobe Service Runtime team. I also work on Adobe’s Internal Developer Platform which is used thousands of Adobe’s Developers to generate code, integrate with Adobe’s Internal services and deploy to Kubernetes.&lt;/p&gt;
+&lt;p&gt;Prior to Adobe, I worked for &lt;a href=&#34;https://www.rakuten.com/&#34;&gt;Rakuten&lt;/a&gt; (Slice Technologies). I mainly worked on Slice API platform, Slice Watch Chrome Extension and Slice Product Catalog Data Platform which is used for training Machine Learning models.&lt;/p&gt;
+&lt;p&gt;Soon after completing my Masters I started working at &lt;a href=&#34;https://www.veracyte.com/&#34;&gt;Veracyte&lt;/a&gt;. At Veracyte, I worked on Java and AngularJS building Lab Information Systems Portal. I built workflows which leveraged Genome Expression Classifier algorithm to detect Thyroid Cancer.&lt;/p&gt;
+&lt;p&gt;During my Masters in Computer Engineering from ASU I interned at HealthBI (acquired by Equality Health). I built Java WebApps for a Patient Care Coordination System.&lt;/p&gt;
+&lt;p&gt;Just after my undergrad (BTech) in Electronics and Communications from &lt;a href=&#34;https://svnit.ac.in/&#34;&gt;NIT Surat&lt;/a&gt;, an Institute of National Importance, I started working at Delphi Technical Center India (rebranded to &lt;a href=&#34;https://www.aptiv.com/&#34;&gt;Aptiv&lt;/a&gt;), Bangalore. I mainly worked on Embedded C programming Engine Controller Units. I worked on Automatic Gears, Fuel Cap Sensors, CAN protocol. Most of the code I wrote went into GM, Hyundai and some BMWs!&lt;/p&gt;
+&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
+&lt;p&gt;I have a Masters in Computer Systems Engineering from Arizona State University’s &lt;a href=&#34;https://engineering.asu.edu/&#34;&gt;Fulton School of Engineering&lt;/a&gt;. I did my course work in Operating Systems, Computer Architecture, Web Security, Data Structures &amp;amp; Algorithms.&lt;/p&gt;
+&lt;p&gt;I did my Undergrad from &lt;a href=&#34;https://svnit.ac.in/&#34;&gt;National Institute of Technology&lt;/a&gt;, Surat with specialization in Electronics and Communication Systems.&lt;/p&gt;
+&lt;p&gt;I did a Product Management Certificate course from Stanford University, California.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Adobe Service Runtime</title>
+      <link>http://localhost:1313/projects/adobe-service-runtime/</link>
+      <pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/adobe-service-runtime/</guid>
+      
+        <description>&lt;h2 id=&#34;adobe-service-runtime&#34;&gt;Adobe Service Runtime&lt;/h2&gt;
+&lt;p&gt;Adobe Service Runtime or ASR is an implementation of the Microservice chassis pattern. It provides mechanisms to handle cross cutting concerns like logging, health checks, metrics, easy access to foundational Adobe services via Connectors, etc.&lt;/p&gt;
+&lt;h2 id=&#34;why-is-asr-required&#34;&gt;Why is ASR required?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Provide a collection of components, tools, and best practices (12 factor) which enable rapid development of four 9s capable innovative and secure services at Adobe by product and research teams &lt;/li&gt;
+&lt;li&gt;Enable a container first deployment system&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;my-role-in-this-project&#34;&gt;My Role in this Project&lt;/h2&gt;
+&lt;p&gt;I am the Hands On Lead Engineer/Architect/Product Manager for this suite of Libraries&lt;/p&gt;
+&lt;h2 id=&#34;impact-of-asr-at-adobe&#34;&gt;Impact of ASR at Adobe&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Using ASR has saved 4-6 weeks of setup time for new Java Projects at Adobe&lt;/li&gt;
+&lt;li&gt;Secure BOM for every Adobe service that uses ASR&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
     </item>
     
     <item>
       <title>To DIY or Not to DIY!</title>
-      <link>https://mathad.me/posts/to-diy-or-not-to-diy/</link>
+      <link>http://localhost:1313/posts/to-diy-or-not-to-diy/</link>
       <pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mathad.me/posts/to-diy-or-not-to-diy/</guid>
-      <description>tldr; Choose a DIY project if you have nothing better to do or you just love it. If not stay away!
-We have many &amp;ldquo;hobbies&amp;rdquo; or things which we wish to get done. Our professional lives are boring! (Speak for yourself?) We seek joy in non-work things in our lives. Gardening 🪴, Building your own furniture 🪑, Building your own website 💻, Cooking 👨‍🍳, Cleaning 🧹, HBO 📺. . .</description>
+      <guid>http://localhost:1313/posts/to-diy-or-not-to-diy/</guid>
+      
+        <description>&lt;p&gt;tldr;
+Choose a DIY project if you have nothing better to do or you just love it. If not stay away!&lt;/p&gt;
+&lt;p&gt;We have many &amp;ldquo;hobbies&amp;rdquo; or things which we wish to get done. Our professional lives are boring! (Speak for yourself?) We seek joy in non-work things in our lives. Gardening 🪴, Building your own furniture 🪑, Building your own website 💻, Cooking 👨‍🍳, Cleaning 🧹, HBO 📺. . .&lt;/p&gt;
+&lt;p&gt;I did it my way &amp;hellip;
+&lt;img src=&#34;frank-sinatra.png&#34; alt=&#34;frank-sinatra&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What starts as a project to fulfill a need can quickly become an Obsession I did it my way!  If it doesn&amp;rsquo;t go well then you can sing Regrets! I have had a few . . .&lt;/p&gt;
+&lt;p&gt;While it is great to DIY, we need to be ruthless in choosing what we DIY.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If every chore is a DIY, one thing leads to another and you will be forever stuck in unfinished projects.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;All these unfinished projects load with you stress which kills creativity.&lt;/p&gt;
+&lt;p&gt;So, how do we choose where we spend our energy and when do we get help?&lt;/p&gt;
+&lt;h2 id=&#34;pride-passion-or-purse&#34;&gt;Pride, Passion or Purse?&lt;/h2&gt;
+&lt;p&gt;Pride is a good driver but loses steam soon enough when things get hard.&lt;/p&gt;
+&lt;p&gt;Purse is a good motivator too,  I mean save a few 100$ to fix the toilet why not? Flipside is when you mess up and pay extra to the Professional to fix your mess.&lt;/p&gt;
+&lt;p&gt;Passion keeps you going no matter how difficult the job gets. It invokes the Michael Angelo inside us to keep building or fixing until we get to a perfection.&lt;/p&gt;
+&lt;h2 id=&#34;stress-of-unfinished-projects&#34;&gt;Stress of unfinished projects&lt;/h2&gt;
+&lt;p&gt;Photo by Ketut Subiyanto on Pexels.com&lt;/p&gt;
+&lt;p&gt;Most adults with responsibilities are busy. They are constantly distracted with commitments. Even though you are highly capable of DIY but if your situation starves you off the time that is required then the whole project can go downhill.&lt;/p&gt;
+&lt;p&gt;Some people lack the motivation to go beyond a few hours to finish a project. If you keep waiting for a inspiration your house will be a museum of unfinished projects.&lt;/p&gt;
+&lt;p&gt;Here we have unfinished 2x4 table circa 2015, inspired by a Pinterest pin on How to make a table using just 2x4s&lt;/p&gt;
+&lt;p&gt;Our attention is constantly being pulled by different ropes. So the stress to focus one task is already too much. If you have too many DIYs waiting for inspiration to finish then the only good news is your projects might qualify as Modern Art!&lt;/p&gt;
+&lt;h2 id=&#34;decompression-when-things-are-done&#34;&gt;Decompression when things are done&lt;/h2&gt;
+&lt;p&gt;Photo by Brett Sayles on Pexels.com&lt;/p&gt;
+&lt;p&gt;Once you successfully complete a DIY project, the best part is where they give you the Gold Medal and standing ovation. All in your head of course! But it is one of the sweet joys of life. The satisfaction and bragging rights keeps pumping Endorphins into your brain.&lt;/p&gt;
+&lt;h2 id=&#34;miles-to-go-before-i-weep&#34;&gt;Miles to go before I weep?&lt;/h2&gt;
+&lt;p&gt;In your life time you will get tons of opportunity to DIY. How to choose wisely? Who knows who cares! Pick a project, do your dance, if it is not for you lesson well learnt right?&lt;/p&gt;
+&lt;h2 id=&#34;how-much-time-do-you-have-and-what-would-you-rather-do-with-your-time&#34;&gt;How much time do you have and what would you rather do with your time?&lt;/h2&gt;
+&lt;p&gt;If it is your passion and you derive pleasure then no matter how much you get paid for your time it is worth it to pursue it.&lt;/p&gt;
+&lt;p&gt;If you would rather watch TV or TikTok then also you can use these projects to detox and unwind.&lt;/p&gt;
+&lt;p&gt;If you are making bank at work and you hate DIY but are in it just to save a few bucks probably not good financial sense.&lt;/p&gt;
+</description>
+      
     </item>
     
     <item>
-      <title>About Me</title>
-      <link>https://mathad.me/about-me/</link>
+      <title></title>
+      <link>http://localhost:1313/posts/gtd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mathad.me/about-me/</guid>
-      <description>About Me</description>
+      <guid>http://localhost:1313/posts/gtd/</guid>
+      
+        <description>&lt;h1 id=&#34;getting-things-done&#34;&gt;Getting Things Done!&lt;/h1&gt;
+&lt;p&gt;Being a productivity Nerd. I always think I should be GTDing. Like every minute of my time should be spent producing something or moving things forward.&lt;/p&gt;
+&lt;p&gt;The idea is great but is it practical? Nope! But will I stop then? Never!!&lt;/p&gt;
+&lt;p&gt;The problem I face is the time allocated to GTD will be never be fully available. I am constantly interrupted or don&amp;rsquo;t feel the energy to do it. Also, Life Happens! and you
+get pulled around by so many strings. This is where we lose control of that golden hour where we thought we would GTD.&lt;/p&gt;
+&lt;p&gt;The end result is I am always on the GTD mode being stressed about it. I barely move the needle many times. Even If I moved a mountain, I would not credit myself because I
+feel that I may get complacent and lose the streak.&lt;/p&gt;
+</description>
+      
     </item>
     
     <item>
       <title>Archives</title>
-      <link>https://mathad.me/archives/</link>
+      <link>http://localhost:1313/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mathad.me/archives/</guid>
-      <description>archives</description>
+      <guid>http://localhost:1313/archives/</guid>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>My Newsletter Archives</title>
-      <link>https://mathad.me/newsletter/archives/</link>
+      <link>http://localhost:1313/newsletter/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mathad.me/newsletter/archives/</guid>
-      <description></description>
+      <guid>http://localhost:1313/newsletter/archives/</guid>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>Search</title>
-      <link>https://mathad.me/search/</link>
+      <link>http://localhost:1313/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mathad.me/search/</guid>
-      <description></description>
+      <guid>http://localhost:1313/search/</guid>
+      
+        <description></description>
+      
     </item>
     
   </channel>

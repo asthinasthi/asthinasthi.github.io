@@ -1,9 +1,7 @@
 ---
 title: About Me
-layout: about-me
 url: "/about"
 summary: About Me
-author: "Anirudh Mathad"
 date: "2023-08-27"
 ShowToc: true
 TocOpen: true
