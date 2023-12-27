@@ -6,7 +6,11 @@ date: "2023-08-27"
 ShowToc: true
 TocOpen: true
 ---
-I am a “Computer Scientist” at Adobe focusing on Internal Developer Platform. I lead the Adobe Service Runtime team. Adobe Service Runtime is a framework used by >60% of Adobe’s Java Services. I also build several tools such as Code Generation, Onboarding Tools and Service Registry which help Adobe’s Developers go from Concept to Cloud in a few minutes.
+I am an Engineering Leader at Adobe leading several Internal Developer Platform teams. Our mission is to enhance Developer Productivity by making it enjoyable to go from Concept to Cloud!
+
+The projects I oversee include Adobe Service Runtime, Adobe Insights, Platform Observability, ArgoCD Provisioner, Code Generation and a few cross functional initiatives.
+
+Adobe Service Runtime is a framework used by >60% of Adobe’s Java Services. I also build several tools such as Code Generation, Onboarding Tools and Service Registry which help Adobe’s Developers go from Concept to Cloud in a few minutes.
 
 I am a Jack of many trades. I mainly work on Java, GoLang & Python. I actively work on internal ArgoCD based Deployment platform which powers successful Adobe products like Firefly, Photoshop, Doc Cloud etc.
 
