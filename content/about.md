@@ -25,12 +25,16 @@ Recently, I presented at ArgoCon 2022.
 In Reverse Chronological Order
 ([Adobe](https://www.adobe.com/) | [Rakuten/Slice](https://www.rakuten.com/) | [Veracyte](https://www.veracyte.com/) | [HealthBI](https://healthbi.com) | Delphi)
 
+### Adobe, San Jose - CA
 I am a Computer Scientist at [Adobe](https://www.adobe.com/). I mainly focus on Platform Engineering Projects. I lead the Adobe Service Runtime team. I also work on Adobe’s Internal Developer Platform which is used thousands of Adobe’s Developers to generate code, integrate with Adobe’s Internal services and deploy to Kubernetes.
 
+### Rakuten, San Mateo - CA
 Prior to Adobe, I worked for [Rakuten](https://www.rakuten.com/) (Slice Technologies). I mainly worked on Slice API platform, Slice Watch Chrome Extension and Slice Product Catalog Data Platform which is used for training Machine Learning models.
 
+### Veracyte, South San Francisco - CA
 Soon after completing my Masters I started working at [Veracyte](https://www.veracyte.com/). At Veracyte, I worked on Java and AngularJS building Lab Information Systems Portal. I built workflows which leveraged Genome Expression Classifier algorithm to detect Thyroid Cancer.
 
+### HealthBI, Scottsdale - AZ
 During my Masters in Computer Engineering from ASU I interned at HealthBI (acquired by Equality Health). I built Java WebApps for a Patient Care Coordination System.
 
 Just after my undergrad (BTech) in Electronics and Communications from [NIT Surat](https://svnit.ac.in/), an Institute of National Importance, I started working at Delphi Technical Center India (rebranded to [Aptiv](https://www.aptiv.com/)), Bangalore. I mainly worked on Embedded C programming Engine Controller Units. I worked on Automatic Gears, Fuel Cap Sensors, CAN protocol. Most of the code I wrote went into GM, Hyundai and some BMWs!
