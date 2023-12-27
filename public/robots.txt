@@ -1,3 +1,2 @@
 User-agent: *
-Disallow:
-Sitemap: https://mathad.me/sitemap.xml
+Sitemap: http://localhost:1313/sitemap.xml
