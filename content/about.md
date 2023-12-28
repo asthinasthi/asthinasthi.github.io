@@ -40,8 +40,11 @@ During my Masters in Computer Engineering from ASU I interned at HealthBI (acqui
 Just after my undergrad (BTech) in Electronics and Communications from [NIT Surat](https://svnit.ac.in/), an Institute of National Importance, I started working at Delphi Technical Center India (rebranded to [Aptiv](https://www.aptiv.com/)), Bangalore. I mainly worked on Embedded C programming Engine Controller Units. I worked on Automatic Gears, Fuel Cap Sensors, CAN protocol. Most of the code I wrote went into GM, Hyundai and some BMWs!
 
 ## Education
+### MS from Arizona State University, Tempe - AZ
 I have a Masters in Computer Systems Engineering from Arizona State University’s [Fulton School of Engineering](https://engineering.asu.edu/). I did my course work in Operating Systems, Computer Architecture, Web Security, Data Structures & Algorithms.
 
+### BTech from NIT, Surat - India
 I did my Undergrad from [National Institute of Technology](https://svnit.ac.in/), Surat with specialization in Electronics and Communication Systems.
 
+### Stanford University, Palo Alto - CA
 I did a Product Management Certificate course from Stanford University, California.
