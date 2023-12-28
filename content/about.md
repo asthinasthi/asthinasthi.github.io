@@ -26,7 +26,7 @@ In Reverse Chronological Order
 ([Adobe](https://www.adobe.com/) | [Rakuten/Slice](https://www.rakuten.com/) | [Veracyte](https://www.veracyte.com/) | [HealthBI](https://healthbi.com) | Delphi)
 
 ### Adobe, San Jose - CA
-I am a Computer Scientist at [Adobe](https://www.adobe.com/). I mainly focus on Platform Engineering Projects. I lead the Adobe Service Runtime team. I also work on Adobe’s Internal Developer Platform which is used thousands of Adobe’s Developers to generate code, integrate with Adobe’s Internal services and deploy to Kubernetes.
+I work as a "Computer Scientist" at [Adobe](https://www.adobe.com/). I mainly focus on Platform Engineering Projects. I lead the Adobe Service Runtime team. I also work on Adobe’s Internal Developer Platform which is used thousands of Adobe’s Developers to generate code, integrate with Adobe’s Internal services and deploy to Kubernetes.
 
 ### Rakuten, San Mateo - CA
 Prior to Adobe, I worked for [Rakuten](https://www.rakuten.com/) (Slice Technologies). I mainly worked on Slice API platform, Slice Watch Chrome Extension and Slice Product Catalog Data Platform which is used for training Machine Learning models.
