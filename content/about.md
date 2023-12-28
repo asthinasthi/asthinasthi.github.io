@@ -37,6 +37,7 @@ Soon after completing my Masters I started working at [Veracyte](https://www.ver
 ### HealthBI, Scottsdale - AZ
 During my Masters in Computer Engineering from ASU I interned at HealthBI (acquired by Equality Health). I built Java WebApps for a Patient Care Coordination System.
 
+### Aptiv (Formerly Delphi), Bangalore - India
 Just after my undergrad (BTech) in Electronics and Communications from [NIT Surat](https://svnit.ac.in/), an Institute of National Importance, I started working at Delphi Technical Center India (rebranded to [Aptiv](https://www.aptiv.com/)), Bangalore. I mainly worked on Embedded C programming Engine Controller Units. I worked on Automatic Gears, Fuel Cap Sensors, CAN protocol. Most of the code I wrote went into GM, Hyundai and some BMWs!
 
 ## Education
