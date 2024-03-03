@@ -6,15 +6,24 @@ date: "2023-08-27"
 ShowToc: true
 TocOpen: true
 ---
-I am an Engineering Leader at Adobe leading several Internal Developer Platform teams. Our mission is to enhance Developer Productivity by making it enjoyable to go from Concept to Cloud!
+Hey there! 👋 I'm Anirudh, an Engineering Leader at Adobe, on a mission to make the developer journey from Concept to Cloud not just efficient, but downright enjoyable! 🌐✨
 
-The projects I oversee include Adobe Service Runtime, Adobe Insights, Platform Observability, ArgoCD Provisioner, Code Generation and a few cross functional initiatives.
+### What's in My Toolbox?
+#### Adobe Service Runtime 🛠️**
+Ever wondered what powers over 60% of Adobe's Java Services? It's the incredible Adobe Service Runtime framework that I oversee. It's not just a framework; it's the backbone of Adobe's digital prowess!
 
-Adobe Service Runtime is a framework used by >60% of Adobe’s Java Services. I also build several tools such as Code Generation, Onboarding Tools and Service Registry which help Adobe’s Developers go from Concept to Cloud in a few minutes.
+#### Code Generation Magic ✨
+I don't just stop at frameworks. I create tools that make developers' lives a breeze. From Code Generation to Onboarding Tools and Service Registry, I've got it covered. Because who says going from Concept to Cloud has to be a headache?
 
-I am a Jack of many trades. I mainly work on Java, GoLang & Python. I actively work on internal ArgoCD based Deployment platform which powers successful Adobe products like Firefly, Photoshop, Doc Cloud etc.
+#### Multi-Lingual Maestro 🎭
+I'm a Jack of many trades, dancing between Java, GoLang, and Python. Whether it's coding in the elegance of Java, the efficiency of GoLang, or the versatility of Python, I've got it handled.
 
-I am a huge Productivity Nerd. I am curious and chase the cool new productivity tools. So far [Todoist](https://todoist.com) and [Logseq](https://logseq.com) are my current obsessions. I am an early adopter of Upnote and Acreom.
+#### ArgoCD Awesomeness 🚀
+Ever heard of Adobe products like Firefly, Photoshop, or Doc Cloud? They owe their seamless deployments to my work on the internal ArgoCD based Deployment platform. Making magic happen behind the scenes!
+
+### The Productivity Nerd in Me 🤓
+#### Constantly Curious 🕵️
+I'm not just an Engineering Leader; I'm a huge Productivity Nerd. Always on the lookout for the latest and greatest tools to boost efficiency. [Todoist](https://todoist.com/app/) and [Logseq](https://logseq.com/) are my current obsessions, but I'm not one to shy away from being an early adopter of Upnote and Acreom.
 
 ## Talks and Conferences
 Recently, I presented at ArgoCon 2022.
