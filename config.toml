@@ -44,18 +44,23 @@ defaultContentLanguage = "en"           # Default language to use
   identifier = "archives"
   pageref = "/post/"
 [[menu.main]]
-  name = "Tags"
+  name = "Projects"
   weight = 30
+  identifier = "projects"
+  pageref = "/projects/"
+[[menu.main]]
+  name = "Tags"
+  weight = 40
   identifier = "tags"
   pageref = "/tags/"
 [[menu.main]]
   name = "Categories"
-  weight = 40
+  weight = 50
   identifier = "categories"
   pageref = "/categories/"
 [[menu.main]]
   name = "About"
-  weight = 50
+  weight = 60
   identifier = "about"
   pageref = "/about"
 

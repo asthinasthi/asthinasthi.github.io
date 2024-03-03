@@ -1,4 +1,15 @@
-# Getting Things Done! 
+---
+author: "Anirudh Mathad"
+title: "Getting Things Done!"
+date: "2023-12-27"
+description: ""
+tags:
+  - productivity
+ShowToc: true
+TocOpen: true
+---
+
+# Getting Things Done!
 Being a productivity Nerd. I always think I should be GTDing. Like every minute of my time should be spent producing something or moving things forward. 
 
 The idea is great but is it practical? Nope! But will I stop then? Never!!
