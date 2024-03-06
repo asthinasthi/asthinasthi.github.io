@@ -15,7 +15,7 @@ Choose a DIY project if you have nothing better to do or you just love it. If no
 We have many "hobbies" or things which we wish to get done. Our professional lives are boring! (Speak for yourself?) We seek joy in non-work things in our lives. Gardening 🪴, Building your own furniture 🪑, Building your own website 💻, Cooking 👨‍🍳, Cleaning 🧹, HBO 📺. . .
 
 I did it my way ...
-![frank-sinatra](frank-sinatra.png)
+![my-way](myway.jpeg)
 
 What starts as a project to fulfill a need can quickly become an Obsession I did it my way!  If it doesn't go well then you can sing Regrets! I have had a few . . . 
 

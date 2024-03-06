@@ -8,9 +8,11 @@ tags:
 ShowToc: true
 TocOpen: true
 ---
-Being a productivity Nerd. I always think I should be GTDing. Like every minute of my time should be spent producing something or moving things forward. 
+Being a productivity Nerd. I always think I should be GTDing. Like every minute of my time should be spent producing something or moving things forward.
 
 The idea is great but is it practical? Nope! But will I stop then? Never!!
+
+![GTD](gtd.jpeg)
 
 The problem I face is the time allocated to GTD will be never be fully available. I am constantly interrupted or don't feel the energy to do it. Also, Life Happens! and you
 get pulled around by so many strings. This is where we lose control of that golden hour where we thought we would GTD.
